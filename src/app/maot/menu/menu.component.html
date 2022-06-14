@@ -1,0 +1,20 @@
+<p>
+  <mat-toolbar class="mat-toolbar">
+    <div class="mat-toolbar__main">
+      <div [ngClass]="animations === 'd' ? ' icon-logoMaot__no-animations' : 'icon-logoMaot'" class="mat-toolbar__icon">
+      </div>
+      <div [ngClass]="animations === 'd' ? 'mat-toolbar__title__no-animations' : 'mat-toolbar__title'">
+        <span>Maot Application</span>
+      </div>
+      <div [ngClass]="{'mat-toolbar__content' : animations !== 'd'}">
+        content
+      </div>
+    </div>
+  <div [ngClass]="animations === 'd' ? 'mat-toolbar__auth__no-animations' : 'mat-toolbar__auth' "  class="">
+    <div class="mat-toolbar__auth--acc">
+      <a routerLinkActive="true" [routerLink]="'/login'" class="btn btn--white">Login</a>
+    </div>
+  </div>
+
+  </mat-toolbar>
+</p>

@@ -1,8 +1,19 @@
 $color-light-blue: #0016e0;
-$color-medium-blue: #000c75;
-$color-dark-blue: #020946;
+$color-medium-blue: #02073b;
+$color-dark-blue: #03051a;
 
 $color-grey:#777; 
 $color-white: #fff;
 
 
+$color-gradient-start-blue:rgb(43, 45, 150);
+$color-gradient-end-purple:rgb(60, 33, 60);
+
+$height-menu:4rem;
+
+
+.a__no-style,
+.a__no-style:active
+{
+  text-decoration: none;
+}

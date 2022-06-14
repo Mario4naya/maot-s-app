@@ -1,0 +1,73 @@
+@keyframes typing {
+  from{
+     width: 0;
+  }
+  to{
+     width: 23ch;
+  }
+ }
+ 
+ @keyframes eraseBorder {
+   0%{
+     border-right: none;
+   }
+   1%{
+     border-right: 0.4rem solid;
+   }
+   99%{
+     border-right: 0.4rem solid;
+   }
+   100%{
+     border-right: none;
+   }
+   
+ }
+
+ @keyframes moveFromRight {
+  0%{
+    transform: translateX(30rem);
+  }
+  95%{
+    transform: translateX(-2%);
+  }
+   
+  100%{
+    transform: translateX(0);
+  }
+ }
+
+ @keyframes moveFromLeft {
+  0%{
+    transform: translateX(-30rem);
+  }
+  95%{
+    transform: translateX(2%);
+  }
+   
+  100%{
+    transform: translateX(0);
+  }
+ }
+
+
+ @keyframes moveFromBottom {
+   0%{
+      transform: translateY(600%);
+   }
+   95%{
+    transform: translateY(-2%);
+   }
+   100%{
+    transform: translateY(0%);
+   }
+ }
+
+ @keyframes fadeIn {
+   from{
+     opacity:0;
+   }
+   to{
+    opacity: 1;
+   }
+   
+ }

@@ -1,0 +1,45 @@
+
+@import "../../../styles/variables";
+@import "../../../styles/animations";
+
+.container{
+  padding: 1.5rem;
+}
+
+.header{
+  background-image:linear-gradient(360deg, rgba($color-gradient-start-blue,0.55) 0%, rgba($color-gradient-end-purple,0.45) 100%), url('../../../assets/images/forest.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &__text-box{
+    text-align: center;
+    width: 30%;
+    
+  *{
+    margin-bottom: 2rem; 
+  }
+
+    h1{
+      text-shadow: 2px 2px $color-grey;
+      letter-spacing: .5rem;
+    }
+
+    span{
+      text-align: left;
+      display: block;
+      letter-spacing: .25rem;
+    }
+
+    animation: moveFromBottom 5s ease-in-out 2s;
+    animation-fill-mode: backwards;
+
+  }
+
+ 
+
+}

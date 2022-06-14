@@ -1,0 +1,129 @@
+@import "../../../styles/variables";
+@import "../../../styles/animations";
+
+
+.mat-toolbar {
+  position: relative;
+  height: $height-menu;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(
+    to right,
+    $color-medium-blue,
+    $color-dark-blue
+  );
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__no-animations{
+      margin-right: 15rem;
+    }
+
+    & > div:nth-child(2n+3){
+      margin-left: 2rem;
+    }
+  }
+
+
+  &__content{
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out 2s;
+    animation-fill-mode: forwards;
+  }
+
+  &__title {
+    color: $color-white;
+    display: block;
+    white-space: nowrap;
+    border-right: 0.4rem solid;
+    animation: typing 3s steps(20) 2s, eraseBorder 3s steps(20) 2s;
+    animation-fill-mode: both;
+    overflow: hidden;
+  }
+  &__auth{
+    margin-right: 15rem;
+    *{
+      opacity: 0;
+      animation: fadeIn 3s ease-in-out 2s;
+      animation-fill-mode: forwards;
+    }
+
+    &__no-animations{
+      margin-right: 15rem;
+    }
+
+  }
+
+
+}
+
+.icon-LogoMaot {
+  display: none;
+  height: 100%;
+  &__no-animations{
+    display: none;
+  }
+
+}
+.icon-logoMaot::before {
+  content: "\e900";
+  font-size: 2rem;
+  display: inline-block;
+  margin-right: 1rem;
+  background-image: linear-gradient(to right, $color-grey, $color-white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moveFromLeft 3s ease-in-out 5s backwards;
+}
+
+.icon-logoMaot__no-animations::before {
+  content: "\e900";
+  font-size:  2rem;
+  display: inline-block;
+  margin-right: 1rem;
+  background-image: linear-gradient(to right, $color-grey, $color-white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.btn{    
+  &:hover {
+    transform: translateY(0.3rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19); }
+  &:active {
+  transform: translateY(0.4rem);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  &:active:after {
+    transform: scale(1.5);
+    opacity: 0; }
+
+  font-size:1rem;
+  text-decoration: none;
+  border: 1px solid $color-grey;
+  border-radius: 2rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 6rem;
+  height: 1.5rem;
+  &--white{
+    color: $color-white;
+    background-color: transparent;
+  }
+
+
+}
