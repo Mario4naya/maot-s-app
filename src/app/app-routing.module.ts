@@ -1,4 +1,3 @@
-import { LoginComponent } from './maot/login/login.component';
 import { HomeComponent } from './maot/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,16 +5,17 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path:'',
-    component:HomeComponent
-  },
-  {
-    path:'login',
-    component:LoginComponent
-  },
-  {
+    component:HomeComponent,
+    pathMatch:'full',
+    children:[
+      {
+      path:'login',
+      loadChildren:()=>import('./maot/login/login.module').then((m)=> m.LoginModule),
+    },
+    ],
+  },{
     path:'**',
-    redirectTo:'/home',
-    pathMatch:'full'
+    redirectTo: ''
   }
 ];
 
